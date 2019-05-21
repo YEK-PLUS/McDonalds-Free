@@ -9,7 +9,7 @@ html,body{
 	height:100%;
 	width:100%;
 	margin:0;
-	background: #E3E2E6;
+	background: #fff;
 	padding:0;
 }
 .menu{
@@ -104,12 +104,11 @@ html,body{
 	border-radius: 5px;
 }
 .pay.c{
-	display: flex;
-
+	z-index: 99999;
+	opacity: 1;
 }
 .pay{
-	display: none;
-
+	display: flex;
 	color:white;
 	position: absolute;
 	height: 100%;
@@ -121,7 +120,9 @@ html,body{
 	align-items: center;
 	text-align: center;
 	flex-direction: column;
-	z-index: 99999;
+	z-index: -1;
+	opacity: 0;
+	transition: .5s all;
 }
 .pay .button{
 	display: flex;
@@ -138,3 +139,70 @@ html,body{
 	font-size: 20px;
 	border-radius: 5px;
 }
+#timer{
+	position: fixed;
+	display: block;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	box-shadow: 0px -2px 3px 3px rgba(0,0,0,0.2);
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#timer .time{
+	display: flex;
+	flex-direction: column;
+}
+#timer .time div{
+	display:flex;
+	height: auto;
+	flex-direction:row;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 5px;
+}
+#timer .time div i{
+	margin-right:5px;
+}
+#timer .time div span{
+	color:black;
+	font-size: 20px;
+	line-height: 20px;
+	background: transparent;
+}
+
+.date-img{
+	padding-top:20px;
+	position: absolute;
+    top: 45%;
+    height: 170px;
+    border-radius: 50%;
+    background-image: url(../img/date.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 170px;
+    z-index: 99999;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 35px;
+    opacity: 0;
+    transition: .2s all ease;
+
+}
+.date-img.s{
+	opacity: 1;
+}
+.date-img>span:nth-child(1){
+	line-height:70px;
+	font-size: 70px;
+}
+.date-img>span:nth-child(2){
+		margin-top:-10px;
+	}
