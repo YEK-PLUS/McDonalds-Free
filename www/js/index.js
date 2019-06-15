@@ -13,7 +13,7 @@ $(".pay>.button").click(function(){
     let a ='';
     a += '<div class="time">';
     a += 'Geçerlilik';
-    a += '<div><i class="far fa-clock"></i> <span m=1 s=5 >1:05</span></div>';
+    a += '<div><i class="far fa-clock"></i> <span m=3 s=0 >3:00</span></div>';
     a += '</div>';
 
     document.querySelector("#paying").innerHTML=a;
